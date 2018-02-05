@@ -34,13 +34,17 @@ def main():
         except:
             raise Exception('Image could not be loaded at the specified file directory.')
 
+        print("\nProcessing...\n")
         encryptedImage = encrypt(originalImage, secretImage)
         encryptedImage.save("C:/Users/Ethans Laptop/Desktop/Encrypted_Image.png")
 
     # Begins the decryption process.
     elif mode == 'decrypt':
+        print("\nProcessing...\n")
         decryptedImage = decrypt(originalImage)
         decryptedImage.save("C:/Users/Ethans Laptop/Desktop/Decrypted_Image.png")
+
+    print(mode + "ion was completed successfully.")
 
 # Functions as the basic XNOR logic gate.
 def XNOR(leftSide, rightSide):
