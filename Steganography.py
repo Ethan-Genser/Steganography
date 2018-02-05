@@ -1,9 +1,6 @@
 from PIL import Image
 
 # Constants
-IMAGE_WIDTH = 800
-IMAGE_HEIGHT = 400
-IMAGE_SIZE = (IMAGE_WIDTH, IMAGE_HEIGHT)
 BYTE_MAX = 255
 COLOR_THRESHOLD = BYTE_MAX/2
 RED_CHANNEL = 0
@@ -92,13 +89,14 @@ def encrypt(originalImage, secretImage):
 
         return (newRedValue, newGreenValue, newBlueValue)
 
-    originalImage = originalImage.resize(IMAGE_SIZE)
-    secretImage = secretImage.resize(IMAGE_SIZE)
+    imageSize = (min(originalImage.size[0], secretImage.size[0]), min(originalImage.size[1], secretImage.size[1]))
+    originalImage = originalImage.resize(imageSize)
+    secretImage = secretImage.resize(imageSize)
     originalData = originalImage.load()
     secretData = secretImage.load()
 
-    for x in range(0, IMAGE_WIDTH):
-        for y in range(0, IMAGE_HEIGHT):
+    for x in range(0, imageSize[0]):
+        for y in range(0, imageSize[1]):
             newPixel = encodePixel(originalData[x,y], secretData[x,y])
             originalData[x,y] = newPixel
 
