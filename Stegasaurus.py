@@ -1,3 +1,5 @@
+# Copyright 2018 Ethan Genser
+
 from PIL import Image
 
 # Constants
