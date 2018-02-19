@@ -37,7 +37,7 @@ def encrypt(originalImage:Image, secretImage:Image)->Image:
                 return value + int(bit)
 
     # Returns a pixel whose last bit for each color chanel coresponds to the
-	# secret image's color level.
+    # secret image's color level.
     def encodePixel(originalPixel:tuple, secretPixel:tuple)->tuple:
         # Finds what the secret bit for each color channel should be.
         lastRedBit = getLastBit(secretPixel[RED_CHANNEL])
@@ -52,7 +52,7 @@ def encrypt(originalImage:Image, secretImage:Image)->Image:
         return (newRedValue, newGreenValue, newBlueValue)
 
     imageSize = (min(originalImage.size[0], secretImage.size[0]), 
-					min(originalImage.size[1], secretImage.size[1]))
+                    min(originalImage.size[1], secretImage.size[1]))
     originalImage = originalImage.resize(imageSize)
     secretImage = secretImage.resize(imageSize)
     originalData = originalImage.load()
