@@ -17,7 +17,8 @@ def XNOR(leftSide, rightSide):
 # The main entry point for the program
 def main():
 
-    # User sets the mode to either encypt an image or decrypt a previously encypted image.
+    # User sets the mode to either encypt an image or decrypt a previously
+	# encypted image.
     mode = ''
     while XNOR(mode != 'encrypt', mode != 'decrypt'):
         mode = input('Would you like to encrypt or decrypt an image? ')
@@ -39,14 +40,14 @@ def main():
         except:
             raise Exception('Image could not be loaded at the specified file directory.')
 
-        # Creates encrypted image
+        # Creates encrypted image.
         print("\nProcessing...\n")
         encryptedImage = ss.encrypt(originalImage, secretImage)
         encryptedImage.save("C:/Users/Ethans Laptop/Desktop/Encrypted_Image.png")
 
     # Begins the decryption process.
     elif mode == 'decrypt':
-        # Creates decrypted image
+        # Creates decrypted image.
         print("\nProcessing...\n")
         decryptedImage = ss.decrypt(originalImage)
         decryptedImage.save("C:/Users/Ethans Laptop/Desktop/Decrypted_Image.png")

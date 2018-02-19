@@ -13,30 +13,31 @@ ALPHA_CHANEL = 3
 # Returns true if number is odd, and false if number is even.
 IsOdd = lambda x: bool(x % 2)
 
-# Returns the last bit of the specified value
+# Returns the last bit of the specified value.
 getLastBit = lambda x: int(x > COLOR_THRESHOLD)
 
 # Hides the secret image inside the original image and returns the product.
 def encrypt(originalImage:Image, secretImage:Image)->Image:
 
-    # Sets the last bit of a value equal to the specified bit
+    # Sets the last bit of a value equal to the specified bit.
     def setLastBit(value:int, bit)->int:
-        # If the last bit is 1
+        # If the last bit is 1...
         if IsOdd(value):
             if int(bit) == 1:
-                return value;
+                return value
             elif value + 1 > BYTE_MAX:
-                return value - 1;
+                return value - 1
             else:
-                return value + 1;
-        # If the last bit is 0
+                return value + 1
+        # If the last bit is 0...
         else:
-            if value + int(bit) > 255:
-                return value - int(bit);
+            if value + int(bit) > BYTE_MAX:
+                return value - int(bit)
             else:
-                return value + int(bit);
+                return value + int(bit)
 
-    # Returns a pixel whose last bit for each color chanel coresponds to the secret image's color level
+    # Returns a pixel whose last bit for each color chanel coresponds to the
+	# secret image's color level.
     def encodePixel(originalPixel:tuple, secretPixel:tuple)->tuple:
         # Finds what the secret bit for each color channel should be.
         lastRedBit = getLastBit(secretPixel[RED_CHANNEL])
@@ -50,7 +51,8 @@ def encrypt(originalImage:Image, secretImage:Image)->Image:
 
         return (newRedValue, newGreenValue, newBlueValue)
 
-    imageSize = (min(originalImage.size[0], secretImage.size[0]), min(originalImage.size[1], secretImage.size[1]))
+    imageSize = (min(originalImage.size[0], secretImage.size[0]), 
+					min(originalImage.size[1], secretImage.size[1]))
     originalImage = originalImage.resize(imageSize)
     secretImage = secretImage.resize(imageSize)
     originalData = originalImage.load()
@@ -74,7 +76,7 @@ def decrypt(originalImage:Image)->Image:
         else:
             return 0
 
-     # Uses the secret bits from the pixel to set the decoded pixel's colors.
+    # Uses the secret bits from the pixel to set the decoded pixel's colors.
     def decodePixel(pixel:tuple)->tuple:
         red = decodeColor(pixel[RED_CHANNEL])
         green = decodeColor(pixel[GREEN_CHANNEL])
