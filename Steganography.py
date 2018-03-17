@@ -1,4 +1,4 @@
-# Copyright 2018 Ethan Genser
+# Copyright 2018 Ethan P. Genser
 
 from PIL import Image
 
