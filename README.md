@@ -24,7 +24,7 @@ After this, the module's two basic functions `encrypt` and `decrypt` will become
 
 ## Image Format Support
 
-Steganography.py is based on PIL v5.0.0. As such, the program is only capable of loading images with PIL compatible file extensions. In addition, some image formats that are supported by the PIL library may not be supported by Steganography.py. Listed bellow are the currently supported file extension supported by Steganography.py (Attempt to load any file not included in the list bellow, may cause the program to not function properly or crash). A full list of the PIL library's compatible image formats can be found at http://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html.
+Steganography.py is based on PIL v5.0.0. As such, the program is only capable of loading images with PIL compatible file extensions. In addition, some image formats that are supported by the PIL library may not be supported by Steganography.py. Listed bellow are the currently supported file extension supported by Steganography.py (Attempt to load any file not included in the list bellow, may cause the program to not function properly or crash). A full list of the PIL library's compatible image formats can be found [here](http://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html.).
 * __PNG__
 
 ## File Summaries
