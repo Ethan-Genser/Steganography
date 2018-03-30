@@ -1,7 +1,7 @@
 # Copyright 2018 Ethan P. Genser
 
 from PIL import Image
-import Stegasaurus as ss
+import Steganography as sg
 
 # Functions as the basic XNOR logic gate.
 def XNOR(leftSide, rightSide):
@@ -42,14 +42,14 @@ def main():
 
         # Creates encrypted image.
         print("\nProcessing...\n")
-        encryptedImage = ss.encrypt(originalImage, secretImage)
+        encryptedImage = sg.encrypt(originalImage, secretImage)
         encryptedImage.save("C:/Users/Ethans Laptop/Desktop/Encrypted_Image.png")
 
     # Begins the decryption process.
     elif mode == 'decrypt':
         # Creates decrypted image.
         print("\nProcessing...\n")
-        decryptedImage = ss.decrypt(originalImage)
+        decryptedImage = sg.decrypt(originalImage)
         decryptedImage.save("C:/Users/Ethans Laptop/Desktop/Decrypted_Image.png")
 
     print(mode + "ion was completed successfully!\n")
