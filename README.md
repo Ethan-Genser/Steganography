@@ -2,13 +2,13 @@
 
 Steganography.py is an entry-level steganography project by Ethan Genser. It encodes the color values for each pixel on the secret image in the last bit of the color values in the coresponding pixels on the cover image.
 
-### Prerequisites
+## Prerequisites
 
 Before you can run this program, ensure that yoou have the following software installed and functional:
 * Python 3.5.2 or better
 * PIL version 5.0.0 or better
 
-### Running
+## Running
 
 __With default implementation:__
 
@@ -22,12 +22,12 @@ To use the Steganography module in your own custom program, add the following li
 
 After this, the module's two basic functions `encrypt` and `decrypt` will become available for use. The `encrypt` function takes two images as arguments and return a single, encrypted image. The `decrypt` function takes a single, encrypted image and, as the name implies, returns the decrypted image hidden inside.
 
-### Image Format Support
+## Image Format Support
 
 Steganography.py is based on PIL v5.0.0. As such, the program is only capable of loading images with PIL compatible file extensions. In addition, some image formats that are supported by the PIL library may not be supported by Steganography.py. Listed bellow are the currently supported file extension supported by Steganography.py (Attempt to load any file not included in the list bellow, may cause the program to not function properly or crash). A full list of the PIL library's compatible image formats can be found at http://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html.
 * __PNG__
 
-### File Summaries
+## File Summaries
 
 Bellow is the a list of each program file and a brief explanation of its role:
 
