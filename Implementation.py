@@ -43,16 +43,16 @@ def main():
         # Creates encrypted image.
         print("\nProcessing...\n")
         encryptedImage = sg.encrypt(originalImage, secretImage)
-        encryptedImage.save("C:/Users/Ethans Laptop/Desktop/Encrypted_Image.png")
+        encryptedImage.save('Encrypted_Image.png')
 
     # Begins the decryption process.
     elif mode == 'decrypt':
         # Creates decrypted image.
         print("\nProcessing...\n")
         decryptedImage = sg.decrypt(originalImage)
-        decryptedImage.save("C:/Users/Ethans Laptop/Desktop/Decrypted_Image.png")
+        decryptedImage.save("Decrypted_Image.png")
 
-    print(mode + "ion was completed successfully!\n")
+    print(mode + 'ion was completed successfully!\n')
 
 # Calls main function
 if __name__=='__main__':main()
