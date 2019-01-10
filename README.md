@@ -2,9 +2,7 @@
 
 Steganography.py is an entry-level steganography project by Ethan Genser. It encodes the color values for each pixel on the secret image in the last bit of the color values in the coresponding pixels on the cover image.
 
-|          Cover Image ![Cover Image](Images/Flag.png)             |          Secret Image ![Secret Image](Images/Tree.png)           |
-|:----------------------------------------------------------------:|:----------------------------------------------------------------:|
-|__Encrypted Image__ ![Encrypted Image](Images/Encrypted_Image.png)|__Recovered Image__ ![Recovered Image](Images/Decrypted_Image.png)|
+![Diagram](Images/Capture.PNG)
 
 ## Prerequisites
 
