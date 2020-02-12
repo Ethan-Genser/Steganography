@@ -6,7 +6,7 @@ Steganography.py is an entry-level steganography project by Ethan Genser. It enc
 
 ## Prerequisites
 
-Before you can run this program, ensure that yoou have the following software installed and functional:
+Before you can run this program, ensure that you have the following software installed and functional:
 * Python 3.5.2 or better
 * PIL version 5.0.0 or better
 
